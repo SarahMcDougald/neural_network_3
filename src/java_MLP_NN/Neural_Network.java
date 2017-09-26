@@ -15,6 +15,21 @@ public class Neural_Network
 
     /*
 
+    class variables.
+    int inputs_numNodes;
+    int hidden_numNodes;
+    int outputs_numNodes;
+
+    int[] inputs_rawValues;
+    int[] hidden_rawValues;
+    int[] outputs_rawValues;
+
+    int[][] layer1_weightValues;
+    int[][] layer2_weightValues;
+
+    int[][] layer1_weightChanges;
+
+
 
 
      */
@@ -68,8 +83,51 @@ public class Neural_Network
 
 
     /**
-     * 
+     *
      */
+
+
+    /**
+     * Training function for the Neural Network.
+     *
+     * Will call both backpropagation and feed forward functions.
+     *
+     * Will probably overload this function. This will be simple, with a set N learning rate, etc.
+     *
+     */
+    /*
+
+
+     */
+
+
+
+
+
+
+
+    /////////////////////////////// Helper Functions //////////////////////////////////
+
+
+    /**
+     * Leaky ReLu, the activation function. Used in feed forward.
+     */
+    /*
+
+
+     */
+
+
+    /**
+     * Derivative of Leaky ReLu. Used in backpropagation.
+     */
+    /*
+
+     */
+
+
+    // Should there be a function to load the data, in the Neural Network?
+    // Or, should it go in the tester class?
 
 
 
