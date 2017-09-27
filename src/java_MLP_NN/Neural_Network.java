@@ -28,6 +28,7 @@ public class Neural_Network
     int[][] layer2_weightValues;
 
     int[][] layer1_weightChanges;
+    int[][] layer2_weightChanges;
 
 
 
@@ -45,7 +46,29 @@ public class Neural_Network
     {
     // set up all variables. Random values set for weights. Compare to neural network attempt #2.
 
+    inputs_numNodes = numberInputs;
+    hidden_numNodes = numberHidden;
+    outputs_numNodes = numberOutput
+
+    inputs_rawValues = new int[inputs_numNodes];
+    hidden_rawValues = new int[hidden_numNodes];
+    outputs_rawValues = new int[outputs_numNodes];
+
+    layer1_weightValues = new int[inputs_numNodes][hidden_numNodes];
+    layer2_weightValues = new int[hidden_numNodes][outputs_numNodes];
+
     // Because of lack of Python's ML libraries, will have to make functions for randomization of weights. CALL them here.
+    //Call method to randomize weights.
+    randomizeWeights(layer1_weightValues);
+    randomizeWeights(layer2_weightValues);
+
+    layer1_weightChanges = new int[inputs_numNodes][hidden_numNodes];
+    layer2_weightChanges = new int[hidden_numNodes][outputs_numNodes];
+
+    //Call a method to fill with 0s.
+
+
+
 
 
     }
@@ -129,6 +152,59 @@ public class Neural_Network
     // Should there be a function to load the data, in the Neural Network?
     // Or, should it go in the tester class?
 
+
+    /**
+     * Function to randomize weights.
+     *
+     * @param doubleArr the 2D array of doubles that will hold the weight values
+     */
+    /*
+    for (int i = 0; i < ....one dimension's width; i++)
+    {
+
+        for (int j = 0; j < ...other dimension's width; j++)
+        {
+
+        doubleArr[i][j] = Math.random() * ....some value; see randn() from Python...;
+
+        }
+
+
+    }
+
+     */
+    public void randomizeWeights(double[][] doubleArr)
+    {
+
+    }
+
+
+    /**
+     * Function to fill with 0s.
+     *
+     * @param doubleArr the 2D array of doubles that will hold the weight changes
+     */
+    /*
+    for (int i = 0; i < ....one dimension's width; i++)
+    {
+
+        for (int j = 0; j < ...other dimension's width; j++)
+        {
+
+        doubleArr[i][j] = 0;
+
+        }
+
+
+    }
+
+
+     */
+    public void fillZeroesWeights(double[][] doubleArr)
+    {
+
+
+    }
 
 
 }
